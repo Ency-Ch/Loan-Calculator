@@ -39,13 +39,13 @@ const monthly = (principal * x * calculatedInterest)/(x - 1);
 
 if(amount.value != '' && interest.value != '' && years.value != ''){
     monthlyPayment.value = monthly.toFixed(2);
-    totalPayment.value = (monthly * calculatedPayments.toFixed(2))
+    totalPayment.value = (monthly * calculatedPayments).toFixed(2)
     totalInterest.value = ((monthly  * calculatedPayments)-principal).toFixed(2);
     //show results 
     document.getElementById('results').style.display = 'block';
     //hide the spinner 
-    document.getElementById('loading').style.display = 'none'
-    ;
+    document.getElementById('loading').style.display = 'none';
+    console.log(amount.value)
 }else{
   showError('check numbers');
   console.log(amount.value)
